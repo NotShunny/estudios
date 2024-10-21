@@ -1,43 +1,40 @@
-let Nombre = 'Bran';
+// CASO 1 //
+let edad = prompt('¿Cuantos años tenes?');
 
-let Apellido = 'Rojas';
+if (edad >= 21) {
+    console.log('Sos mayor, podes comprar escabio');
+    alert('Sos mayor, pasa, podes comprar escabio');
+} else if (edad >= 18) { 
+    console.log('Podes pasar, no podes comprar escabio');
+    alert('Sos mayor, pasa pero no podes comprar escabio');
+} else {
+    console.log('Sos menor andate');
+    alert('Sos menor raja de aca');
+}
+// CASO 2 //
+//let temperatura = prompt('¿Cuantos grados hace hoy?');
 
-let Ubicacion = 'Buenos Aires';
+//if (temperatura >= 28) { 
+//    console.log('Hace un poco de calor');
+//    alert('Hace un poco de calor afuera, ve con un shortsito');
+// } else if (temperatura >= 14 ) { 
+//    console.log('Hace un poco de frio, abrigate');
+//    alert('Hace frio, ve abrigado');
+// } else {
+//    console.log('Hace demasiado frio');
+//    alert('Hace demasiado frio, ve demasiado abrigado');
+// }
 
-let edad = 6;
+// CASO 3 // 
+// let cocinar = prompt('Cuanto tiempo vas a dejar hirviendo el fideo?');
 
-let YO = edad + 10;
-
-console.log('Hola soy' , Nombre.concat('don') , Apellido);
-
-console.log('Vivo en', Ubicacion, 'y tengo', YO);
-
-let Nacimiento = '22 de Marzo '
-
-let Fecha = Nacimiento + 'de 2008';
-
-console.log('Naci el' , Fecha );
-
-// Ejercicio 1 //
-
-// Tenes que desarrollar un programa el cual calcule cuanto dinero/teca el cliente puede gastar por dia,
-// segun cuanto tiempo se quede y cuanto presupuesto tenga.
-
-// Instrucciones:
-// Pregunta al usuario la cantidad de días que vas a estar de viaje y almacenálo en una Variable
-// Pregunta al usuario el presupuesto total para las vacaciones
-// Calculá cuánto podés gastar por noche
-
-// Mostrále el resultado al cliente con un mensaje parecido a:
-
-'Podés gastar XX por dia para que te alcance durante los XX días de viaje.';
-
-let dias = prompt('¿Cuantos dias vas a estar de viaje?');
-
-let Presupuesto_viaje = prompt('¿Cuanto presupuesto tiene para las vacaciones?');
-
-let division = Presupuesto_viaje / dias;
-
-let calcular = dias = division;
-
-alert('Por dia debera gastar ' + calcular ,);
+// if (cocinar >= 15) { 
+    // console.log('Perfecto, esos fideos ya estan para sacarse');
+    // alert('Esos fideos ya estan listos para sacarse!!');
+// } else if (cocinar = 10 ) { 
+    // console.log('Yo diria que los dejes un ratito más pero cada quien a su gusto');
+    // alert('Esos fideos le faltarian pero bueno, cada quien a su gusto');
+// } else if (cocinar <= 5) { 
+    //  console.log('Esos fideos no estan, le faltan');
+    // alert('Le faltan a esos fideos');
+// }
