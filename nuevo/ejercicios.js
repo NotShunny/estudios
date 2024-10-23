@@ -56,9 +56,9 @@
 // Pídele al usuario dos números y la operación que quiere realizar (+, -, *, /). 
 // Dependiendo de la operación, muestra el resultado correspondiente usando alert.
 
-let primer_numero =  prompt('Pon el primer numero');
+// let primer_numero =  prompt('Pon el primer numero');
 
-let segundo_numero = prompt('El segundo numero');
+// let segundo_numero = prompt('El segundo numero');
 
-let Calculo = prompt('Que desea realizar? /, +, *, -?');
+// let Calculo = prompt('Que desea realizar? /, +, *, -?');
 
