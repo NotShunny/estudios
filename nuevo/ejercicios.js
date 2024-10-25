@@ -1,64 +1,41 @@
- // Ejercicio 1: Verificación de contraseña
-// Pídele al usuario que ingrese una contraseña. Si la contraseña es correcta (por ejemplo, "1234"), 
-// muestra un mensaje de éxito con alert, si no, muestra un mensaje de error.
+// Ejercicio 4 pero con function //
 
-// ejercicio 1 
 
-// let contraseña = prompt('Crea una contraseña');
+let primer_numero = prompt('Pon el primer numero');
+let segundo_numero = prompt('El segundo numero');
 
-// let confirmar = prompt('Repita su contraseña');
+let primerNumeroParseado = parseInt(primer_numero);
+let segundoNumeroParseado = parseInt(segundo_numero);
 
-// if (confirmar === contraseña) {
-//     console.log('Contraseña creada exitosamente');
-//     alert('Contraseña asegurada');
-// } else {
-//     console.log('Contraseña incorrecta');
-//     alert('Contraseña incorrecta, pruebe devuelta');
-// }
+let calculo = prompt('Que desea realizar? /, +, *, - ?');
 
-// Ejercicio 2: Clasificación de edad
-// Pídele al usuario su edad y responde con un mensaje que clasifique su rango de edad:
-// - Menor de 13: "Eres un niño."
-// - Entre 13 y 17: "Eres un adolescente."
-// - Entre 18 y 64: "Eres un adulto."
-// - 65 o más: "Eres un adulto mayor."
+function sumar(primerNumeroParseado, segundoNumeroParseado) {
+    alert(`La operacion es sumar y el resultado es:  ${primerNumeroParseado + segundoNumeroParseado}`);
+}
 
-// Ejercicio 2 
+function restar(primerNumeroParseado, segundoNumeroParseado) {
+    alert(`La operacion es restar y el resultado es: ${primerNumeroParseado - segundoNumeroParseado}` );
+}
 
-// let edad = prompt('Cuantos años tenes?');
+function multiplicar(primerNumeroParseado , segundoNumeroParseado) {
+    alert(`La operacion es multiplicacion y el resultado es : ${primerNumeroParseado * segundoNumeroParseado}`);
+}
+function dividir(primerNumeroParseado , segundoNumeroParseado) {
+    alert(`La operacion es division y el resultado es: ${primerNumeroParseado / segundoNumeroParseado}`);
+}
+// +
+// -
+// *
+// /
 
-// if (edad >= 65) { 
-//     alert('Eres una persona mayor');
-// } else if (edad >= 18) {
-//     alert('Eres un adulto');
-// } else if (edad >= 17) {
-//     alert('Sos un adolescente');
-// } else {
-//     alert('Sos un menor de edad');
-// }
-
-// Ejercicio 3: Nmero par o impar
-// Pídele al usuario un número e indicale por mensaje si es par o impar.
-
-// Ejercicio 3 
-
-// let Aleatorio = prompt('Escriba un numero, determinare si es par o impar');
-
-// if (Aleatorio % 2 ==0) {
-//     console.log('El numero es par');
-//     alert('el numero es par');
-// } else {
-//     console.log('el numero es impar');
-//     alert('el numero es impar');
-// }
-
-// Ejercicio 4: Calculadora 
-// Pídele al usuario dos números y la operación que quiere realizar (+, -, *, /). 
-// Dependiendo de la operación, muestra el resultado correspondiente usando alert.
-
-// let primer_numero =  prompt('Pon el primer numero');
-
-// let segundo_numero = prompt('El segundo numero');
-
-// let Calculo = prompt('Que desea realizar? /, +, *, -?');
-
+if (calculo === '+') {
+ sumar(primerNumeroParseado, segundoNumeroParseado);
+} else if (calculo === '-') {
+   restar(primerNumeroParseado, segundoNumeroParseado);
+} else if (calculo === '*') {
+ multiplicar(primerNumeroParseado, segundoNumeroParseado);
+} else if (calculo === '/') {
+ dividir(primerNumeroParseado, segundoNumeroParseado);
+} else {
+  alert('No existe la operacion que ingresaste...');
+}
