@@ -1,18 +1,11 @@
-// let detector = 0;
+//let numeros = [26, 3, 4, 89, 23, 67, 34, 89, 23, 65, 76, 12, 65, 76, 2, 3, 8, 6, 3,];
 
-// while (detector <= 20) {
-//     if (detector % 2 === 0 ){
-//         console.log('Este numero es par ' + detector );
-//     } else {
-//         console.log('Este numero es impar ' + detector );
-//     }
-//     detector = detector + 1;
-// }
-
-// for (let i = 0; i <= 20; i++) {
-//     if (i % 2 === 0) {
-//         console.log('Este numero es par ' + i);
-//     } else {
-//         console.log('Este numero es impar ' + i); 
-//     }
+// for (let i = 0; i <= numeros.length; i++) {
+   // if (numeros[i] >= 60) {
+   //  console.log('Sos de la tercera edad ' + numeros[i]);
+  //  } else if (numeros[i] >= 20) {
+   //     console.log('Sos un adulto joven ' + numeros[i]);
+  //  } else {
+   //     console.log('Sos menor de edad ' + numeros[i]);
+  //  } 
 // }
