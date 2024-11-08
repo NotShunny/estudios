@@ -1,11 +1,18 @@
-//let numeros = [26, 3, 4, 89, 23, 67, 34, 89, 23, 65, 76, 12, 65, 76, 2, 3, 8, 6, 3,];
+let numeros = [26, 3, 4, 89, 23, 67, 34, 89, 23, 65, 76, 12, 65, 76, 2, 3, 8, 6, 3,];
 
-// for (let i = 0; i <= numeros.length; i++) {
-   // if (numeros[i] >= 60) {
-   //  console.log('Sos de la tercera edad ' + numeros[i]);
-  //  } else if (numeros[i] >= 20) {
-   //     console.log('Sos un adulto joven ' + numeros[i]);
-  //  } else {
-   //     console.log('Sos menor de edad ' + numeros[i]);
-  //  } 
-// }
+
+            
+            let dobles = numeros.map(function (numero) {
+                console.log('Numeros:' , numero); //Logeamos lo que va a salir por la consola//
+                return numero * 2; //lo que nos tiene que devolver que es un tipo number y la multiplicacion por 2 de todo el array de numeros.
+              });
+
+              console.log('Numeros multiplicados :' , dobles); // se ejecuta afuera de la variante dobles para que se ejecute//
+
+              let divididos = numeros.map(function (numero) {
+                console.log('Numeros antes de la division:' , numero);
+                return numero / 2
+                
+              });
+
+              console.log('Despues de la division:' , divididos);
