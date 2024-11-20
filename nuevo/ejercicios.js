@@ -1,28 +1,29 @@
 
-const simularKeys = { 
-  modelo: 'key1',
-  ejemplo: 'key2',
-  regular: 'key3',
+// const keyValor = () => {
+//   for (let keys in coche) {
+//     console.log(`Este es la key : ${keys} y este es el value ${coche[keys]} `);
+//   };
+// };
 
-  keys: ['modelo', 'ejemplo', 'regular'],
+// keyValor();
 
-  simularKey: function(Simularlo) {
-    console.log('Keys:' , this.keys);
-  }
-};
+//const simKey = (objeto) => {
+//  const arreglo = []
+//  for(let key in objeto) {
+//    arreglo.push(key);
+//  };
+//  return arreglo;
+//}
 
-console.log(simularKeys.simularKey());
+//console.log(simKey(coche));
 
-const simularValue = {
-  Nombre : 'Jose',
-  apellido : 'Jose',
-  edad : '42',
 
-  valores : ['Jose' , 'Jose', '42'],
+// const SimValue = (objeto) => {
+//   const array = []
+//  for (let key in objeto) {
+ //    array.push(objeto[key])
+ //  };
+ //  return array;
+// };
 
-  funciones : function(Valor) {
-    console.log('valores:', this.valores);
-  },
-};
-
-console.log(simularValue.funciones());
+// console.log(SimValue(coche));
