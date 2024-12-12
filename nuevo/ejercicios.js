@@ -1,31 +1,33 @@
-// registrar alumnos y calcular el promedio //
-// // Instrucción : Permite ingresar alumnos con su nombre y calificacion. Agrega los alumnos a un arreglo //
-// // y calcula el promedio de las calificaciones //
+// // Ejercicio 8: Inventario de productos
+// // Instrucción: Permite al usuario agregar productos a un inventario y luego buscar productos por nombre
 
-// let alumnos = []
+let productos = [];
 
-// let sumar = 0;
+let ingresarProducto = 'Si';
 
-// let añadirAlumnos = 'Si';
+let Preguntar = prompt('¿Va a seguir ingresando productos?');
 
-// while (añadirAlumnos == 'Si') {
-//       let preguntarAlumno = prompt('¿Cual es su nombre?');
-//       let preguntarCalificacion = prompt('¿Cual es su calificacion?');
-//       const ObjAlumnos = {
-//             nombre : preguntarAlumno,
-//             calificacion : preguntarCalificacion
-//       };
-//      // Con los datos de las dos preguntas armar el objeto alumno
-//      // Y guardar el objeto alumno en el arreglo alumnos 
-//      alumnos.push(ObjAlumnos);
-//       añadirAlumnos = prompt('¿Quiere seguir añadiendo?');   
-// }
+while(Preguntar == 'Si') {
+    let ingresar = prompt('¿Que vas a meter?')
+    let precioProducto = prompt('Cual es el precio?')
+    const inventario = {
+        nombre : ingresar,
+        precio : precioProducto
+    }
+    productos.push(inventario);
+    Preguntar = prompt('¿Va a seguir ingresando productos?');
+}
 
-// if (alumnos.length > 0) {
-//       for(let i = 0; i < alumnos.length; i ++){
-//             sumar = sumar + alumnos[i].calificacion;
-//       }
-//       let calcularPromedio = sumar / alumnos.length;
-//       console.log(`El promedio de los alumnos es ${calcularPromedio}`);
-// }
-// //Si el cliente pone que no devolver el promedio de todos los alumnos //
+
+let productoBuscado = prompt('¿Que producto esta buscando?');
+
+
+for(let i = 0; i < productos.length; i++) {
+   
+    if (productoBuscado == productos[i].nombre) {
+        console.log(`el producto buscado es ${productos[i].nombre} y el precio es ${productos[i].precio}`)
+    } else {
+        console.log('El producto buscado no esta');
+    }
+}
+
