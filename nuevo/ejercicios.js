@@ -1,54 +1,74 @@
-// Generar estadisticas de ventas //
-// Instrucción: Permite al usuario registrar ventas y calcula el total vendido,
-//  la venta más alta y la más baja.
+// Seguimiento de Calorías Diarias
+// Objetivo: Diseñar un programa que registre las calorías consumidas durante el día
+//  en diferentes comidas (desayuno, almuerzo, cena, snacks) y calcule estadísticas importantes como:
 
-let ventas = [];
+// El total de calorías consumidas en el día.
+// La comida con mayor aporte calórico.
+// La comida con menor aporte calórico.
+// El promedio de calorías consumidas por comida.
+// Instrucciones detalladas:
+// Registro de datos:
+// Permite al usuario registrar calorías indicando primero el tipo de comida 
+// (por ejemplo: desayuno, almuerzo, cena o snack) y luego el valor de calorías consumidas.
 
-let confirmar = 'Si';
+// Validación de entradas:
+// Asegúrate de que el usuario solo pueda ingresar números positivos para 
+// las calorías y seleccionar una categoría válida de comida.
 
-while (confirmar == 'Si') {
-    let nombreProducto = prompt('Como se llama el producto?')
-    let valorVenta = prompt('A cuanto?:');
-    const venta = {
-        producto: nombreProducto,
-        monto : valorVenta
-    };
-    ventas.push(venta);
-    confirmar = prompt('Queres ingresar otra venta? (Solo responder Si o no)');
-}
+// Al ingresar las comidas tiene que tener el nombre de la comida,
+//  a que grupo pertenece(desayuno, almuerzo, etc) y cuantas calorias tiene
 
-if (ventas.length > 0) {
-    let totalVendido = 0;
-     let ventaMaxima = ventas[0].monto; 
-     let ventaMinima = ventas[0].monto;
-     let productoMaximo = ventas[0].producto;
-     let productoMinimo = ventas[0].producto;
+// let comidas = [];
 
-     for (let i = 0; i < ventas.length; i++) {
-        totalVendido += ventas[i].monto;
-         if (ventas[i] > ventaMaxima) { 
-            ventaMaxima = ventas[i].monto; 
-            productoMaximo = ventas[i].producto;
-        }
-        if (ventas[i] < ventaMinima) { 
-            ventaMinima = ventas[i].monto;
-            productoMinimo = ventas[i].producto; 
-        } 
-    }
+// let confirmar = 'Si';
 
-console.log(`Lo que se vendio en total fue : ${totalVendido} `);
-console.log(`La venta más alta fue : ${ventaMaxima} y fue ${productoMaximo}`);
-console.log(`la venta más baja fue : ${ventaMinima} lo que vendiste fue una ${productoMinimo}`);
-} else { 
-    console.log('No vendio nada?');
-}
+// while (confirmar == 'Si') {
+//     let comida = prompt('¿Como se llama la comida que estas ingresando?');
+//     let calorias = parseFloat(prompt('¿Cuantas calorias son?'));
+//     let tipoComida = prompt('¿A que grupo lo clasificarias? (Desayuno, almuerzo, cena o snack)');
 
-// Presenta un error que no logro arreglar, al trabajar con numeros grandes da una suma grande
-// Como 1500 + 3200 , empieza con 000 y sigue.
+//     const consumido = {
+//         comida : comida,
+//         grupo : tipoComida, 
+//         calorias : calorias
+//     };
+
+//     comidas.push(consumido);
+
+//     confirmar = prompt('¿Quieres seguir ingresando? (Si/No)');
+// }
+
+// if (comidas.length > 0) {
+//     let totalCalorias = 0; 
+
+//     let comidaMaxima = comidas[0];
+
+//      let comidaMinima = comidas[0];
+
+//       for (let i = 0; i < comidas.length; i++) {
+
+//          totalCalorias += comidas[i].calorias;
+
+//           if (comidas[i].calorias > comidaMaxima.calorias) {
+//              comidaMaxima = comidas[i];
+//              } 
+//              if (comidas[i].calorias < comidaMinima.calorias) { 
+//                 comidaMinima = comidas[i];
+//              }
+//       } 
+//       let promedioCalorias = totalCalorias / comidas.length;
+// console.log(`Total de calorías consumidas en el día: ${totalCalorias}`);
+
+// console.log(`La comida con mayor aporte calórico: ${comidaMaxima.comida} con un total de ${comidaMaxima.calorias} calorías`);
+
+// console.log(`La comida con menor aporte calórico: ${comidaMinima.comida} con un total de ${comidaMinima.calorias} calorías`);
+
+// console.log(`el total de calorias consumidas es ${promedioCalorias}`);
+//    } else { 
+//     console.log('No se registraron comidas.');
+//  }
 
 
-// luego preguntarle al usuario si quiere o no quiere agregar mas, y de ahi devolverler
-//  los datos correspondientes
 
 
 
