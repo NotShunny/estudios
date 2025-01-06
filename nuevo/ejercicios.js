@@ -1,45 +1,45 @@
-// Crea un inventario de productos donde puedas agregar, buscar, eliminar y listar productos.
 
-// Linea 15 a 18 //
-let inventario = [];
+// 1. Agrupar a las personas por rango de edad (menor de 25 y mayor o igual a 25).
+// 2. Eliminar a las personas con menos de 25 años del arreglo.
 
-let preguntar1 = 'Si';
-
-
-
-while (preguntar1 == 'Si') {
-    let preguntar = prompt('¿Que queres hacer? (agregar , buscar, eliminar, listar)');
-    
-    for (let i = 0; i <= inventario.length; i ++) {
-        
-        if (preguntar == 'agregar') {
-        let añadirProductos = prompt('¿Que producto quieres añadir?') 
-        inventario.push(añadirProductos);
-        console.log(`Producto añadido ${añadirProductos}`)
-        } else if (preguntar == 'buscar') {
-            let buscar = prompt('¿Que producto estas buscando?');
-             let buscando = inventario.find((producto) => buscar == producto);
-              if (buscando) {
-             console.log(`El producto que se busco fue ${buscar}`);
-            } else {
-                console.log('El producto no se encuentra o no existe');
-            }
-
-        } else if (preguntar == 'eliminar') {
-            let eliminar = prompt('Que queres eliminar?');
-            let eliminado = inventario.filter((producto) => eliminar != producto);
-            if (eliminado) {
-                console.log(`quedaria ${inventario}`);
-            }
-        } else if (preguntar == 'listar') {
-            console.log(inventario);
-        }
-}
-
-    preguntar1 = prompt('¿Quieres seguir? (Si/No)');
-};
+//             const personas = [
+//                 { nombre: 'Juan', edad: 25 },
+//                 { nombre: 'María', edad: 30 },
+//                 { nombre: 'Pedro', edad: 20 },
+//                 { nombre: 'Ana', edad: 28 },
+//               ];
 
 
+// let mayores = [];
 
+// let menores = [];
 
+// for (let i = 0; i < personas.length; i ++) {
+
+    //     if (personas[i].edad >= 25) {
+        //         mayores.push(personas[i].nombre);
+        //         mayores.push(personas[i].edad);
+        //     } else {
+            //         menores.push(personas[i].nombre);
+            //         menores.push(personas[i].edad);
+            //     }
+            // }
+            // console.log('Estos son los mayores');
+            // console.log(mayores)
+            // console.log('Estos son los menores');
+            // console.log(menores);
+            
+            
+            // 2 //
+
+// let personaMayor = [];
+
+// for(let i = 0; i < personas.length; i ++) {
+//     if (personas[i].edad >= 25) {
+//         personaMayor.push(personas[i].nombre);
+//         personaMayor.push(personas[i].edad);
+//     }
+// }
+// console.log(personaMayor);
+            
 
