@@ -1,45 +1,23 @@
+// Dado un array de productos, usa .filter() para quedarte con los productos disponibles (stock > 0) 
+// y luego usa .map() para crear un array de strings que contengan el nombre del producto y su precio.
 
-// 1. Agrupar a las personas por rango de edad (menor de 25 y mayor o igual a 25).
-// 2. Eliminar a las personas con menos de 25 años del arreglo.
+const productos = [
+    { nombre: "iPhone", precio: 1000, stock: 5 },
+    { nombre: "Samsung", precio: 800, stock: 0 },
+    { nombre: "Xiaomi", precio: 500, stock: 10 },
+  ];
 
-//             const personas = [
-//                 { nombre: 'Juan', edad: 25 },
-//                 { nombre: 'María', edad: 30 },
-//                 { nombre: 'Pedro', edad: 20 },
-//                 { nombre: 'Ana', edad: 28 },
-//               ];
+  // Resultado esperado: ["iPhone - $1000", "Xiaomi - $500"]
 
+let destacar = productos.filter(function (elementos) {
+  return elementos.stock > 0
+})
 
-// let mayores = [];
+console.log(destacar)
 
-// let menores = [];
+let mapeado = destacar.map(function (elementos) {
+  return [elementos.nombre + "-" + elementos.precio]
+});
 
-// for (let i = 0; i < personas.length; i ++) {
-
-    //     if (personas[i].edad >= 25) {
-        //         mayores.push(personas[i].nombre);
-        //         mayores.push(personas[i].edad);
-        //     } else {
-            //         menores.push(personas[i].nombre);
-            //         menores.push(personas[i].edad);
-            //     }
-            // }
-            // console.log('Estos son los mayores');
-            // console.log(mayores)
-            // console.log('Estos son los menores');
-            // console.log(menores);
-            
-            
-            // 2 //
-
-// let personaMayor = [];
-
-// for(let i = 0; i < personas.length; i ++) {
-//     if (personas[i].edad >= 25) {
-//         personaMayor.push(personas[i].nombre);
-//         personaMayor.push(personas[i].edad);
-//     }
-// }
-// console.log(personaMayor);
-            
+console.log(`${mapeado}`);
 
