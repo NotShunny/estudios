@@ -1,23 +1,30 @@
-// Dado un array de productos, usa .filter() para quedarte con los productos disponibles (stock > 0) 
-// y luego usa .map() para crear un array de strings que contengan el nombre del producto y su precio.
+// Cuenta cuántas veces aparece una letra en un string.
 
-const productos = [
-    { nombre: "iPhone", precio: 1000, stock: 5 },
-    { nombre: "Samsung", precio: 800, stock: 0 },
-    { nombre: "Xiaomi", precio: 500, stock: 10 },
-  ];
+let string = "javascript"
 
-  // Resultado esperado: ["iPhone - $1000", "Xiaomi - $500"]
+let split = string.split("")
 
-let destacar = productos.filter(function (elementos) {
-  return elementos.stock > 0
-})
+console.log(split)
 
-console.log(destacar)
+let cont = {}
 
-let mapeado = destacar.map(function (elementos) {
-  return [elementos.nombre + "-" + elementos.precio]
-});
+for (let i = 0; i < split.length; i++){
+    {
+    if (cont.hasOwnProperty(split[i])) {
 
-console.log(`${mapeado}`);
+      cont[split[i]]++;
+
+    } else {
+      cont[split[i]] = 1;
+    }
+  } 
+
+}
+
+console.log(cont)
+
+
+// {j: 1, a: 2 , v: 1 ,...}
+
+// Si la idea es preguntarle al objeto si ya tiene creada esa propiedad, si la propiedad ya esta creada le sumamos uno, y si no esta creada la igualamos a 1.
 
