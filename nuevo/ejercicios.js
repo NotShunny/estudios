@@ -1,14 +1,7 @@
-let nums = [1, 2, 2, 3, 4, 4, 5];
-//Eliminar los numeros duplicados //
+let arreglo = [1, [2, [3, 4]], 5]
 
-let contador = 0
+//Devolver el mismo arreglo pero en un arreglo limpio ej : [1,2,3,4,5] //
 
-let eliminar = nums.reduce(function (x, currentValue){
-    if (!x.includes(currentValue)){
-       x.push(currentValue)
-    }
-    return x;
-},[])
+let flat = arreglo.flat(2);
 
-console.log(eliminar)
-
+console.log(flat)
