@@ -1,7 +1,22 @@
-let arreglo = [1, [2, [3, 4]], 5]
+const productos = [
+  { nombre: "iPhone 12", categoria: "Celulares" },
+  { nombre: "iPhone 13", categoria: "Celulares" },
+  { nombre: "MacBook Air", categoria: "Notebooks" },
+  { nombre: "MacBook Pro", categoria: "Notebooks" },
+  { nombre: "iPad", categoria: "Tablets" },
+  { nombre: "iPad Mini", categoria: "Tablets" }
+];
 
-//Devolver el mismo arreglo pero en un arreglo limpio ej : [1,2,3,4,5] //
+// devolver un objeto que cada propiedad sea la key, la categoria y el value en un arreglo con los nombres de los productos pertenecientes a esa categoria//
 
-let flat = arreglo.flat(2);
+let arr = [];
 
-console.log(flat)
+for (let i= 0 ; i < productos.length; i++){
+  let recorrer = productos[i]
+  if(!arr[recorrer.categoria]){
+    arr[recorrer.categoria] = []
+  }
+  arr[recorrer.categoria].push(recorrer.nombre);
+  }
+
+console.log(arr)
